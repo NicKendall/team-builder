@@ -1,5 +1,6 @@
 import React from "react"
-import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
+import { Card, CardTitle, CardText } from 'reactstrap';
+import { findByLabelText } from "@testing-library/react";
 
 
 const TeamMembers = props => {
@@ -9,9 +10,23 @@ const TeamMembers = props => {
 
     return (
 
-        <div >
+        <div style={{      
+                width: "92%",
+                backgroundColor: 'white',
+                border: '1px solid #333',
+                margin: '1%',
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center" 
+                }}>
             {props.TEAM.map((person, index) => 
-            <Card className="meber-card"key={index}>
+            <Card className="meber-card" key={index} body inverse 
+            style={{      
+                width: "30%",
+                backgroundColor: '#333',
+                border: '1px solid white',
+                margin: '1%'
+                }}>
                 <CardTitle>{person.name}</CardTitle>
                 <CardText>{person.role}</CardText>
                 <CardText>{person.email}</CardText>                
