@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 
 
 const Form = props => {
@@ -41,6 +42,7 @@ const Form = props => {
                     placeholder="name" 
                     onChange={handleChange}
                     name="name"
+                    value={member.name}
                 /><br/>
                 <label htmlFor="email">eMail: </label>
                 <input 
@@ -49,6 +51,7 @@ const Form = props => {
                     placeholder="email" 
                     onChange={handleChange}
                     name="email"
+                    value={member.email}
                 /><br/>
                 <label htmlFor="role">Role: </label>
                 <input 
@@ -57,6 +60,7 @@ const Form = props => {
                     placeholder="your role"
                     onChange={handleChange}
                     name="role" 
+                    value={member.role}
                 /><br/>
                 <label htmlFor="role">Description </label>
                 <input 
@@ -64,7 +68,8 @@ const Form = props => {
                     id="desc" 
                     placeholder="tell us about your role"
                     onChange={handleChange}
-                    name="desc" 
+                    name="desc"
+                    value={member.desc} 
                 /><br/>
                 <button type="submit">Submit</button>
             </form>

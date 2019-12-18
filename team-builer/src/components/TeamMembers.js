@@ -1,4 +1,5 @@
 import React from "react"
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 
 
 const TeamMembers = props => {
@@ -8,14 +9,15 @@ const TeamMembers = props => {
 
     return (
 
-        <div>
+        <div >
             {props.TEAM.map((person, index) => 
-            <div key={index}>
-                <h4>{person.name}</h4>
-                <p>{person.role}</p>
-                <p>{person.email}</p>                
-                <p>{person.desc}</p>
-            </div>
+            <Card className="meber-card"key={index}>
+                <CardTitle>{person.name}</CardTitle>
+                <CardText>{person.role}</CardText>
+                <CardText>{person.email}</CardText>                
+                <CardText>{person.desc}</CardText>
+                <button>Edit</button>
+            </Card>
             )}
         </div>
      
